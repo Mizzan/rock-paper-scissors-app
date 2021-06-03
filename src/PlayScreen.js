@@ -5,19 +5,23 @@ const PlayScreen = () => {
   const [counter, setCounter] = useState(3);
 
   useEffect(() => {
-    if(counter === 0){
+    if(counter < 1){
       return;
     }
 
     const timer = setTimeout(() => {
       setCounter((prev) => prev - 1);
     }, 500);
+
+    return () => {
+      clearTimeout(timer);
+    }
   }, [counter]);
 
   return (
     <View style={styles.container}>
       <Text style={styles.counter}>{counter}</Text>
-      <Button onPress={() => setCounter - 1} title="Click Me" />
+      <Button style={styles.button} onPress={() => setCounter(3)} title="Play Again" />
     </View>
   );
 };
@@ -31,6 +35,9 @@ const styles = StyleSheet.create({
   },
   counter: {
     fontSize: 150,
+  },
+  button: {
+    fontSize: 36,
   },
 });
 
