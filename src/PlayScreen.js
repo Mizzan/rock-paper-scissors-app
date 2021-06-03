@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
   },
   counter: {
     fontSize: 150,
+    color: 'white',
   },
   buttonStyle: {
     marginTop: 100,
