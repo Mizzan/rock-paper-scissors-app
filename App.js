@@ -1,16 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
+import PlayScreen from './src/PlayScreen';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Rock Paper Scissors</Text>
-      <Text style={styles.emojiStyle}>✊✋✌</Text>
-      <View style={styles.btnStyle}>
-        <Button title="Play" />
-      </View>
-    </View>
+    // <View style={styles.container}>
+    //   <Text style={styles.header}>Rock Paper Scissors</Text>
+    //   <Text style={styles.emojiStyle}>✊✋✌</Text>
+    //   <View style={styles.btnStyle}>
+    //     <Button title="Play" />
+    //   </View>
+    // </View>
+
+    <PlayScreen />
   );
 }
 
