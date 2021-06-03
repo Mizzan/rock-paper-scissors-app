@@ -2,13 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Text, Button } from 'react-native';
 
 const PlayScreen = () => {
-  const [counter, setCounter] = useState(2);
+  const [counter, setCounter] = useState(3);
 
   useEffect(() => {
-    // const timer = setTimeout(() => {
-    //   setCounter((prev) => prev - 1);
-    // }, 500);
+    if(counter === 0){
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      setCounter((prev) => prev - 1);
+    }, 500);
   }, [counter]);
+
   return (
     <View style={styles.container}>
       <Text style={styles.counter}>{counter}</Text>
