@@ -1,12 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.header}>Rock Paper Scissors</Text>
+      <Text style={styles.emojiStyle}>✊✋✌</Text>
+      <View style={styles.btnStyle}>
+        <Button title="Play" />
+      </View>
     </View>
   );
 }
@@ -17,5 +20,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  header: {
+    fontSize: 40,
+  },
+  emojiStyle: {
+    fontSize: 65,
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  btnStyle: {
+    marginTop: 30,
+    width: 250,
   },
 });
