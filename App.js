@@ -1,19 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import PlayScreen from './src/PlayScreen';
 
 export default function App() {
+  const [game, setGame] = useState(false);
   return (
-    // <View style={styles.container}>
-    //   <Text style={styles.header}>Rock Paper Scissors</Text>
-    //   <Text style={styles.emojiStyle}>✊✋✌</Text>
-    //   <View style={styles.btnStyle}>
-    //     <Button title="Play" />
-    //   </View>
-    // </View>
+      game ?   
+        <PlayScreen />
+      :
+        <View style={styles.container}>
+          <Text style={styles.header}>What Going on in Your Life??</Text>
+          <Text style={styles.emojiStyle}>✊✋✌</Text>
+          <View style={styles.btnStyle}>
+            <Button title="Play" onPress={()=> setGame(true)}/>
+          </View>
+        </View>
 
-    <PlayScreen />
   );
 }
 
