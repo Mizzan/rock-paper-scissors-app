@@ -11,7 +11,7 @@ const randomImages = () => {
   return emojis[randomEmoji];
 }
 
-const bgColor = ["#16a085", "#c0392b", "#2ecc71"];
+const bgColor = ["#c0392b","#16a085", "#2ecc71"];
 
 const PlayScreen = () => {
   const [counter, setCounter] = useState(3);
