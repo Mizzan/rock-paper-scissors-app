@@ -5,18 +5,16 @@ import PlayScreen from './src/PlayScreen';
 
 export default function App() {
   const [game, setGame] = useState(false);
-  return (
-      game ?   
-        <PlayScreen />
-      :
-        <View style={styles.container}>
-          <Text style={styles.header}>What Going on in Your Life??</Text>
-          <Text style={styles.emojiStyle}>✊✋✌</Text>
-          <View style={styles.btnStyle}>
-            <Button title="Play" onPress={()=> setGame(true)}/>
-          </View>
-        </View>
-
+  return game ? (
+    <PlayScreen />
+  ) : (
+    <View style={styles.container}>
+      <Text style={styles.header}>Let's Play Rock Paper Scissors</Text>
+      <Text style={styles.emojiStyle}>✊✋✌</Text>
+      <View style={styles.btnStyle}>
+        <Button title="Play" onPress={() => setGame(true)} />
+      </View>
+    </View>
   );
 }
 
