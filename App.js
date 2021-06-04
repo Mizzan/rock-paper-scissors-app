@@ -10,7 +10,7 @@ export default function App() {
         <PlayScreen />
       :
         <View style={styles.container}>
-          <Text style={styles.header}>What Going on in Your Life?</Text>
+          <Text style={styles.header}>What Going on in Your Life??</Text>
           <Text style={styles.emojiStyle}>✊✋✌</Text>
           <View style={styles.btnStyle}>
             <Button title="Play" onPress={()=> setGame(true)}/>
